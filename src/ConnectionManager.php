@@ -6,10 +6,10 @@
  * facilitating the execution of queries and type conversion through registered type converters.
  *
  * @package CommonPHP
- * @subpackage DatabaseManager
+ * @subpackage DatabaseEngine
  * @author Timothy McClatchey <timothy@commonphp.org>
  * @copyright 2024 CommonPHP.org
- * @license    http://opensource.org/licenses/MIT MIT License
+ * @license http://opensource.org/licenses/MIT MIT License
  * @noinspection PhpUnused
  */
 
@@ -22,6 +22,7 @@ use CommonPHP\DatabaseEngine\Exceptions\ConnectionAlreadyDefinedException;
 use CommonPHP\DatabaseEngine\Exceptions\ConnectionNotRegisteredException;
 use CommonPHP\DatabaseEngine\Exceptions\DatabaseEngineException;
 use CommonPHP\DatabaseEngine\Exceptions\EmptyConnectionNameException;
+use CommonPHP\DatabaseEngine\Exceptions\EmptyTypeNameException;
 use CommonPHP\DatabaseEngine\Exceptions\ResultNotReadException;
 use CommonPHP\DatabaseEngine\Support\TypeConversionProvider;
 use CommonPHP\DatabaseEngine\TypeConverters\BoolTypeConverter;
@@ -51,6 +52,7 @@ final class ConnectionManager
      * Registers default type converters if not already supported by the provided TypeConversionProvider.
      *
      * @param TypeConversionProvider|null $typeConversionProvider The type conversion provider to use. A new instance is created if null is passed.
+     * @throws EmptyTypeNameException
      */
     public function __construct(?TypeConversionProvider $typeConversionProvider = null)
     {
