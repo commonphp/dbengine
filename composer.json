@@ -1,0 +1,29 @@
+{
+  "name": "comphp/dbengine",
+  "type": "library",
+  "description": "Provides unified access to database engines regardless of the underlying connectivity",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "timothy.mcclatchey",
+      "email": "timothy@commonphp.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CommonPHP\\DatabaseEngine\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CommonPHP\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.3",
+    "psr/container": "^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5.9"
+  }
+}
