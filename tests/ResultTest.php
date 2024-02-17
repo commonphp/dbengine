@@ -1,6 +1,6 @@
 <?php
 
-namespace CommonPHP\Tests;
+namespace CommonPHP\Tests\DatabaseEngine;
 
 use ArrayIterator;
 use CommonPHP\DatabaseEngine\Result;
