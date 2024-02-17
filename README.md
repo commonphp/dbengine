@@ -1,11 +1,11 @@
 # CommonPHP - Database Library
 
-CommonPHP's Database Library is an advanced toolkit for database interaction and management in PHP applications. It offers a comprehensive set of features for connecting to databases, constructing queries, executing them, and handling results efficiently and securely.
+CommonPHP's Database Library is a toolkit for database interaction and management in PHP applications. It offers a comprehensive set of features for connecting to databases, objectifying queries, executing them, and handling results efficiently.
 
 ## Features
 
 - **Connection Management**: Simplifies the setup and management of database connections.
-- **Query Builder**: Offers a fluent interface for constructing SQL queries to prevent syntax errors and SQL injection vulnerabilities.
+- **Query Builder**: Offers a fluent interface for constructing SQL queries including parameter management and dynamic query parts (SELECT * FROM {0} WHERE id=@id)
 - **Type Conversion**: Provides an extensible system for converting between PHP types and database types.
 - **Exception Handling**: Includes detailed exceptions for precise error handling in database operations.
 
@@ -15,14 +15,14 @@ The library is structured into several key components, including the Connection 
 
 ## Requirements
 
-Requires PHP 8.1 or newer and is built to integrate seamlessly with other CommonPHP libraries.
+Requires PHP 8.3 or newer and is built to integrate seamlessly with other CommonPHP libraries.
 
 ## Installation
 
 Use Composer to install:
 
 ```shell
-# There is not yet a composer package for this library
+composer require comphp/dbengine
 ```
 ### Basic Usage
 Initialize the Connection Manager and use the Query Builder to create and execute database queries. Type converters can be used to handle complex data types, and exceptions are thrown for any errors encountered during database operations.
