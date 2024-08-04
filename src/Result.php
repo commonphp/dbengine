@@ -59,7 +59,6 @@ final class Result
         $this->rowCount = $rowCount;
         $this->results = $results;
         $this->results->rewind();
-        $this->results->next();
         $row = $this->results->current();
         if (is_array($row))
         {
@@ -142,7 +141,7 @@ final class Result
      */
     public function getValue(string|int $nameOrOrdinal, string $expectedType = 'mixed'): mixed
     {
-        if ($this->hasRead()) throw new ResultNotReadException();
+        if (!$this->hasRead()) throw new ResultNotReadException();
         $name = '';
         $ordinal = -1;
         $this->getNameAndOrdinal($nameOrOrdinal, $name, $ordinal);
