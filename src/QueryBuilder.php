@@ -50,11 +50,6 @@ class QueryBuilder implements BuildableQueryContract
     public bool $allowParametersToBeReplaced = true;
 
     /**
-     * Constructor is private to enforce usage of the static creation method.
-     */
-    private function __construct() { }
-
-    /**
      * Creates a new instance of the QueryBuilder, optionally starting with a provided SQL statement and tokens.
      *
      * @param string|false $statement Initial SQL statement, if any.
