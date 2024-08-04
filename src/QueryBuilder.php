@@ -26,7 +26,7 @@ use CommonPHP\DatabaseEngine\Exceptions\UuidGenerationFailedException;
 use Override;
 use Random\RandomException;
 
-final class QueryBuilder implements BuildableQueryContract
+class QueryBuilder implements BuildableQueryContract
 {
     /**
      * The SQL statement being built.
